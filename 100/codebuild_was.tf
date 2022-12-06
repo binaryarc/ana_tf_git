@@ -119,10 +119,10 @@ resource "aws_codebuild_project" "ana_cb_proj" {
     location        = "https://github.com/jin4363/ana_was_git.git"
     git_clone_depth = 1
     buildspec="buildspec.yml"
-    # auth {
-    #   type = "OAUTH"
+    auth {
+    type = "OAUTH"
     #   resource = "aws_codebuild_source_credential.ana_codebuild_cred.id"
-    # }
+    }
     # git_submodules_config {
     #   fetch_submodules = true
     # }
