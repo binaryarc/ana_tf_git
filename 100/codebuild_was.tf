@@ -1,7 +1,7 @@
 
 #create role
-resource "aws_iam_role" "codebuild_role" {
-  name = "ana_test_codebuild_role"
+resource "aws_iam_role" "codebuild_role_was" {
+  name = "ana_test_codebuild_role_was"
 
   assume_role_policy = <<EOF
 {
@@ -21,7 +21,7 @@ EOF
 
 #Create policy to link
 resource "aws_iam_role_policy" "codebuild_role_policy" {
-  role = aws_iam_role.codebuild_role.name
+  role = aws_iam_role.codebuild_role_was.name
 #Policy for viewing log
   policy = <<POLICY
 {
@@ -57,7 +57,7 @@ resource "aws_codebuild_project" "ana_cb_proj" {
   name          = "ana_test_codebuild_project"
   description   = "test_codebuild_project"
   #Required
-  service_role  = aws_iam_role.codebuild_role.arn
+  service_role  = aws_iam_role.codebuild_role_was.arn
   #Required
   #output artifacts setting
   artifacts {
