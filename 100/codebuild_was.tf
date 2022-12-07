@@ -77,7 +77,7 @@ resource "aws_codebuild_project" "ana_cb_proj" {
     #environment variables to be used
     environment_variable {
       name  = "AWS_DEFAULT_REGION"
-      value = "SOME_VALUE1"
+      value = "ap-northeast-2"
     }
 
     environment_variable {
@@ -87,14 +87,9 @@ resource "aws_codebuild_project" "ana_cb_proj" {
     
     environment_variable {
       name  = "IMAGE_REPO_NAME"
-      value = "SOME_VALUE2"
+      value = "anaconda"
     }
-    
-    environment_variable {
-      name  = "IMAGE_TAG"
-      value = "SOME_VALUE2"
-    }
-    
+
     environment_variable {
       name  = "AWS_ACCESS_KEY_ID"
       value = "SOME_VALUE2"
