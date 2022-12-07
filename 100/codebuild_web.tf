@@ -101,14 +101,9 @@ resource "aws_codebuild_project" "ana_cb_web_proj" {
     
     environment_variable {
       name  = "IMAGE_REPO_NAME"
-      value = "SOME_VALUE2"
+      value = "anaconda"
     }
-    
-    environment_variable {
-      name  = "IMAGE_TAG"
-      value = "SOME_VALUE2"
-    }
-    
+        
     environment_variable {
       name  = "AWS_ACCESS_KEY_ID"
       value = "SOME_VALUE2"
