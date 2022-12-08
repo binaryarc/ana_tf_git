@@ -7,7 +7,7 @@ resource "aws_subnet" "pub_a" {
   map_public_ip_on_launch = true #인스턴스 생성시 공인IP 자동 할당
   tags = {
     Name = "ANA-WC-PUBLIC-SUBNET-2A"
-    kubernetes.io/role/elb = "1"
+    "kubernetes.io/role/elb" = "1"
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_subnet" "pub_c" {
   map_public_ip_on_launch = true
   tags = {
     Name = "ANA-WC-PUBLIC-SUBNET-2C"
-    kubernetes.io/role/elb = "1"
+    "kubernetes.io/role/elb" = "1"
   }
 }
 
